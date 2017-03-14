@@ -1,0 +1,390 @@
+/* -------------------------------------
+ * For horizontal version, set the
+ * $vertical variable to false
+ * ------------------------------------- */
+/* -------------------------------------
+ * General Style
+ * ------------------------------------- */
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans);
+/*body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5%;
+  font-size: 100%;
+  font-family: "Noto Sans", sans-serif;
+  color: white;
+  background: #7fbbda;
+}*/
+
+h2 {
+  margin: 1.5em 0 0 0;
+  text-align: center;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* -------------------------------------
+ * timeline
+ * ------------------------------------- */
+#timeline {
+  list-style: none;
+  margin: 50px 100px 30px 220px;
+  padding-left: 30px;
+  border-left: 8px solid white;
+}
+#timelineEx {
+  list-style: none;
+  margin: 50px 100px 30px 220px;
+  padding-left: 30px;
+  border-left: 8px solid #7fbbda;
+}
+#timeline li {
+  margin: 40px 0;
+  position: relative;
+}
+#timelineEx li {
+  margin: 40px 0;
+  position: relative;
+}
+#timeline p {
+  margin: 0 0 15px;
+}
+#timelineEx p {
+  margin: 0 0 15px;
+}
+
+.date {
+  margin-top: -10px;
+  top: 50%;
+  left: -158px;
+  font-size: 0.95em;
+  line-height: 20px;
+  position: absolute;
+}
+
+.circle {
+  margin-top: -10px;
+  top: 50%;
+  left: -44px;
+  width: 20px;
+  height: 20px;
+  background: #7fbbda;
+  border: 5px solid white;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+}
+
+.circleEx {
+  margin-top: -10px;
+  top: 50%;
+  left: -44px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 5px solid #7fbbda;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+}
+
+.content {
+  max-height: 20px;
+  padding: 50px 20px 0;
+  border-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.5em;
+  position: relative;
+}
+.contentEx {
+  max-height: 20px;
+  padding: 100px 20px 0; /* premier (top) en fonction de la taille des images */
+  border-color: transparent;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 0.5em;
+  position: relative;
+}
+.content:before, .content:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  position: absolute;
+  pointer-events: none;
+  right: 100%;
+}
+.contentEx:before, .contentEx:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: solid transparent;
+  position: absolute;
+  pointer-events: none;
+  right: 100%;
+}
+.content:before {
+  border-right-color: inherit;
+  border-width: 20px;
+  top: 50%;
+  margin-top: -20px;
+}
+.contentEx:before {
+  border-right-color: inherit;
+  border-width: 20px;
+  top: 50%;
+  margin-top: -20px;
+}
+.content:after {
+  border-right-color: #7fbbda;
+  border-width: 17px;
+  top: 50%;
+  margin-top: -17px;
+}
+.contentEx:after {
+  border-right-color: white;
+  border-width: 17px;
+  top: 50%;
+  margin-top: -17px;
+}
+.content p {
+  max-height: 0;
+  color: transparent;
+  text-align: justify;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  overflow: hidden;
+}
+.contentEx p {
+  max-height: 0;
+  color: transparent;
+  text-align: justify;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  overflow: hidden;
+}
+
+label {
+  font-size: 1.3em;
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+  top: 20px;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: transform 0.2s linear;
+}
+
+.timelineRadio {
+  display: none;
+}
+
+.timelineRadioEx {
+  display: none;
+}
+
+.timelineRadio:checked + .relative label {
+  cursor: auto;
+  -webkit-transform: translateX(42px);
+  -ms-transform: translateX(42px);
+  transform: translateX(42px);
+}
+.timelineRadioEx:checked + .relative label {
+  cursor: auto;
+  -webkit-transform: translateX(42px);
+  -ms-transform: translateX(42px);
+  transform: translateX(42px);
+}
+.timelineRadio:checked + .relative .circle {
+  background: #009900;
+}
+.timelineRadioEx:checked + .relative .circleEx {
+  background: #009900;
+}
+.timelineRadio:checked ~ .content {
+  max-height: 180px;
+  border-color: white;
+  margin-right: 20px;
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+  -webkit-transition: max-height 0.4s linear, border-color 0.5s linear, -webkit-transform 0.2s linear;
+  transition: max-height 0.4s linear, border-color 0.5s linear, transform 0.2s linear;
+}
+.timelineRadioEx:checked ~ .contentEx {
+  max-height: 180px;
+  border-color: #7fbbda;
+  margin-right: 20px;
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+  -webkit-transition: max-height 0.4s linear, border-color 0.5s linear, -webkit-transform 0.2s linear;
+  transition: max-height 0.4s linear, border-color 0.5s linear, transform 0.2s linear;
+}
+.timelineRadio:checked ~ .content p {
+  max-height: 200px;
+  color: white;
+  -webkit-transition: color 0.3s linear 0.3s;
+  transition: color 0.3s linear 0.3s;
+}
+.timelineRadioEx:checked ~ .contentEx p {
+  max-height: 200px;
+  color: black;
+  -webkit-transition: color 0.3s linear 0.3s;
+  transition: color 0.3s linear 0.3s;
+}
+
+.img-dekra {
+	width: 100px;
+	height: auto;
+}
+.img-dreamagine {
+	width: 90px;
+	height: auto;
+}
+.img-unilim {
+	width: 100px;
+	height: auto;
+}
+.img-3il {
+	width: 100px;
+	height: auto;
+}
+
+/* -------------------------------------
+ * mobile phones (vertical version only)
+ * ------------------------------------- */
+@media screen and (max-width: 767px) {
+  #timeline {
+    margin-left: 20px;
+	margin-right: 20px;
+    padding-left: 0;
+    border-left: none;
+  }
+  #timeline li {
+    margin: 70px 0px 50px;
+  }
+
+  label {
+    width: 85%;
+    font-size: 1.1em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+  }
+
+  .content {
+    padding-top: 45px;
+    border-color: white;
+  }
+  .content:before, .content:after {
+    border: solid transparent;
+    bottom: 100%;
+  }
+  .content:before {
+    border-bottom-color: inherit;
+    border-width: 17px;
+    top: -16px;
+    left: 50px;
+    margin-left: -17px;
+  }
+  .content:after {
+    border-bottom-color: #7fbbda;
+    border-width: 20px;
+    top: -20px;
+    left: 50px;
+    margin-left: -20px;
+  }
+  .content p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+
+  .circle {
+    display: none;
+  }
+
+  .date {		/* Commun aux deux timelines */
+	top: -30px;
+	margin-left: 195px;
+	font-size: 1.2em;
+	position: absolute;
+  }
+}
+
+/* -----------------------------------------
+ * mobile phones (vertical version only) EX
+ * ----------------------------------------- */
+@media screen and (max-width: 767px) {
+  #timelineEx {
+    margin-left: 20px;
+	margin-right: 20px;
+    padding-left: 0;
+    border-left: none;
+  }
+  #timelineEx li {
+    margin: 75px 0px 50px;
+  }
+
+  label {
+    width: 85%;
+    font-size: 1.1em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+  }
+
+  .contentEx {
+    padding-top: 100px; /* en fonction de la taille des images */
+    border-color: #7fbbda;
+  }
+  .contentEx:before, .contentEx:after {
+    border: solid transparent;
+    bottom: 100%;
+  }
+  .contentEx:before {
+    border-bottom-color: inherit;
+    border-width: 17px;
+    top: -16px;
+    left: 50px;
+    margin-left: -17px;
+  }
+  .contentEx:after {
+    border-bottom-color: white;
+    border-width: 20px;
+    top: -20px;
+    left: 50px;
+    margin-left: -20px;
+  }
+  .contentEx p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+
+  .circleEx {
+    display: none;
+  }
+}
+
+/* -------------------------------------
+ * contact
+ * ------------------------------------- */
+.contact {
+  width: 100px;
+  height: 120px;
+}
