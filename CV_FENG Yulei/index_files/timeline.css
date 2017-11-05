@@ -219,7 +219,7 @@ label {
   transition: max-height 0.4s linear, border-color 0.5s linear, transform 0.2s linear;
 }
 .timelineRadioEx:checked ~ .contentEx {
-  max-height: 200px;
+  max-height: 280px;
   border-color: #7fbbda;
   margin-right: 20px;
   -webkit-transform: translateX(20px);
