@@ -62,77 +62,63 @@
 				</div>
 			</div>
 			<div class="row">
-				<ul id="timeline">
-          <li class="work">
-          <input class="timelineRadio" id="work6" name="works" type="radio">
-          <div class="relative">
-            <label for="work6">Certificat de développeur intégrateur d’application web</label>
-            <span class="date">2015-2016</span>
-            <span class="circle"></span>
-          </div>
-          <div class="content">
-            <p>
-            Ecole informatique de Xiamen (Chine)
-            </p>
-          </div>
-          </li>
-				  <li class="work">
-					<input class="timelineRadio" id="work5" name="works" type="radio">
-					<div class="relative">
-					  <label for="work5">Doctorat</label>
-					  <span class="date">2013-2016</span>
-					  <span class="circle"></span>
-					</div>
-					<div class="content">
-					  <p>
-						Doctorat en communication interculturelle sur les réseaux sociaux <br/>
-						Ecole doctorale de limoges
-					  </p>
-					</div>
-				  </li>
-				  <li class="work">
-					<input class="timelineRadio" id="work4" name="works" type="radio">
-					<div class="relative">
-					  <label for="work4">Master</label>
-					  <span class="date">2011-2013</span>
-					  <span class="circle"></span>
-					</div>
-					<div class="content">
-					  <p>
-					  	Master Education et Francophonie : Diversité, Culture, Formation <br/>
-						  Université de Limoges
-					  </p>
-					</div>
-				  </li>
-				  <li class="work">
-					<input checked="checked" class="timelineRadio" id="work3" name="works" type="radio">
-					<div class="relative">
-					  <label for="work3">Licence professionnelle</label>
-					  <span class="date">2010-2011</span>
-					  <span class="circle"></span>
-					</div>
-					<div class="content">
-					  <p>
-						Licence professionnelle en Web Design et Rédaction Technique<br>
-						Université de Limoges
-					  </p>
-					</div>
-				  </li>
-				  <li class="work">
-					<input class="timelineRadio" id="work2" name="works" type="radio">
-					<div class="relative">
-					  <label for="work2">DEUG</label>
-					  <span class="date">2008-2010</span>
-					  <span class="circle"></span>
-					</div>
-					<div class="content">
-					  <p>
-						Licence 1 et 2 en commerce électronique <br>
-						Université de Technologie de Wuhan (Chine)
-					  </p>
-					</div>
-				  </li>
-				</ul>
+			  <ul id="timeline">
+				<li class="work">
+				  <input class="timelineRadio" id="work6" name="works" type="radio">
+				  <div class="relative">
+				  <label for="work6">Certificat de développeur intégrateur d’application web</label>
+				  <span class="date">2015-2016</span>
+				  <span class="circle"></span>
+				  </div>
+				  <div class="content">
+				    <p>
+					  Ecole informatique de Xiamen (Chine)
+				    </p>
+				  </div>
+			    </li>
+				<li class="work">
+				  <input class="timelineRadio" id="work4" name="works" type="radio">
+				  <div class="relative">
+				    <label for="work4">Master</label>
+					<span class="date">2011-2013</span>
+					<span class="circle"></span>
+				  </div>
+				  <div class="content">
+				    <p>
+					  Master Education et Francophonie : Diversité, Culture, Formation <br/>
+					  Université de Limoges
+					</p>
+				  </div>
+				</li>
+			    <li class="work">
+				  <input checked="checked" class="timelineRadio" id="work3" name="works" type="radio">
+				  <div class="relative">
+				    <label for="work3">Licence professionnelle</label>
+				    <span class="date">2010-2011</span>
+				    <span class="circle"></span>
+				  </div>
+				  <div class="content">
+				    <p>
+					  Licence professionnelle en Web Design et Rédaction Technique<br>
+					  Université de Limoges
+				    </p>
+				  </div>
+			    </li>
+			    <li class="work">
+				  <input class="timelineRadio" id="work2" name="works" type="radio">
+				  <div class="relative">
+				    <label for="work2">DEUG</label>
+				    <span class="date">2008-2010</span>
+				    <span class="circle"></span>
+				  </div>
+				  <div class="content">
+				    <p>
+				   	  Licence 1 et 2 en commerce électronique <br>
+					  Université de Technologie de Wuhan (Chine)
+				    </p>
+				  </div>
+			    </li>
+			  </ul>
 			</div>
 		</div>
 	</div>
@@ -205,10 +191,12 @@
                <br>
                <p>
                  Développement du projet du web avec langage technique: HTML5, CSS3, Javascript et D3.js.
-                 <a href="https://feng-126.github.io/Projets/jQuery" target="_blank">Voir le site</a>
                </p>
                <p>
                  Développement d'application mobile iOS avec framework React Native.
+               </p>
+			   <p>
+                 Participation de développement Back End avec Symfony.
                </p>
              </div>
          </li>
